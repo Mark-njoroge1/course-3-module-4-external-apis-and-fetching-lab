@@ -7,13 +7,13 @@ async function fetchWeatherData(state) {
     try {
         const response = await fetch(url);
         if (!response.ok) {
-            throw new Error("Failed to fetch weather data");
+            throw new Error("other issue");
         }
 
         const data = await response.json();
         displayWeather(data, state);
     } catch (error) {
-        displayError("network failure");
+        displayError("network issue");
     }
 }
 
